@@ -1,25 +1,41 @@
 var numMoves = 0;
 var winner;
 const icons = ['X', 'O'];
-let firstMover = 'X';
+// var grid = ['', '', '', '', '', '', '', '', '']
 
 function toMove(numMoves) {
     return icons[numMoves % 2];
 }
 
 function move(btnid) {
-    document.getElementById('ttt' + btnid).value = toMove(numMoves);
+    grid[btnid] = toMove(numMoves);
+    let btn = document.getElementById('ttt' + btnid)
+    btn.value = toMove(numMoves);
+    btn.disabled = true
     numMoves++;
-    document.getElementById('tttToMove').innerHTML = `To move: ${toMove(numMoves)}`;
+    document.getElementById('tttToMove').innerHTML = `To move: ${toMove(numMoves + 1)}`;
+    if (gameOver()) {
+        document.getElementById('tttWinner').innerHTML = `The winner is ${toMove(numMoves)}!`
+    }
 }
 
 function testRow(a, b, c) {
-    let btna = document.getElementById('ttt' + a);
-    let btnb = document.getElementById('ttt' + a);
-    let btnc = document.getElementById('ttt' + a);
-    
-    if (btna.value === btnb.value & btnb.value === btnc.value) {
-        return true;
-    }
+    (grid[a] === grid[b] && grid[b] === grid[c]) ? return true:
+    return false;
+}
+
+function gameOver() {
+    // If game over, then return true; otherwise, return false
+    (testRow(0, 1, 2) || testRow(3, 4, 5) || testRow(6, 7, 8) || \
+     testRow(0, 3, 6) || testRow(1, 4, 7) || testRow(2, 5, 8) || \
+     testRow(0, 4, 8) || testRow(2, 5, 8)) ? return true:
     return false
+}
+
+function newGame() {
+    for (i = 0; i < 9; i++) {
+        document.getElementById('ttt' + i).value = '  '
+        var grid = ['', '', '', '', '', '', '', '', '']
+    }
+    
 }
