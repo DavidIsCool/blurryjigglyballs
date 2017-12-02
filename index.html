@@ -1,79 +1,79 @@
 <!DOCTYPE html>
 <html>
 
-  <head>
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width">
-      <title>SpartaHACKS2</title>
-      <link href="index.css" rel="stylesheet" type="text/css" />
-  </head>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>SpartaHACKS2</title>
+    <link href="index.css" rel="stylesheet" type="text/css" />
+</head>
 
-  <body>
-      <script src="index.js"></script>
-      <h1 align="center"> Games for SpartaHacks II!</h1>
+<body>
+    <script src="index.js"></script>
+    <h1 align="center"> Games for SpartaHacks II!</h1>
 
-      <div id='tictactoe'>
-          <h2 align="center">Tic-Tac-Toe</h2>
-          <h3 align="center">Rules</h3>
-          <ol class="rules">
-              <li>X always moves first.</li>
-              <li>Players alternate starting first.</li>
-              <li>Whoever gets three of their symbol in a row first, wins!</li>
-              <li>If neither player gets three in a row, the game is a tie.</li>
-          </ol>
-          <h3 align="center">Game</h3>
-          <table align="center">
-              <tr>
-                  <td>
-                      <button id="ttt0" onclick="move(0)" class="box"></button>
-                  </td>
-                  <td>
-                      <button id="ttt1" onclick="move(1)" class="box"></button>
-                  </td>
-                  <td>
-                      <button id="ttt2" onclick="move(2)" class="box"></button>
-                  </td>
-              </tr>
-              <tr>
-                  <td>
-                      <button id="ttt3" onclick="move(3)" class="box"></button>
-                  </td>
-                  <td>
-                      <button id="ttt4" onclick="move(4)" class="box"></button>
-                  </td>
-                  <td>
-                      <button id="ttt5" onclick="move(5)" class="box"></button>
-                  </td>
-              </tr>
-              <tr>
-                  <td>
-                      <button id="ttt6" onclick="move(6)" class="box"></button>
-                  </td>
-                  <td>
-                      <button id="ttt7" onclick="move(7)" class="box"></button>
-                  </td>
-                  <td>
-                      <button id="ttt8" onclick="move(8)" class="box"></button>
-                  </td>
-              </tr>
-          </table>
-          <p align="center" id='tttToMove'>To Move: X</p>
-          <br>
-          <p align="center" id="tttWinner">Winner, Winner, chicken Dinner!</p>
-      </div>
-      <div class="centered">
-          <button align="center" id="newGame" onclick="newGame()" class="button">New Game</button>
-      </div>
-      <!-- <div>
-          <h2>Battleship</h2>
-          <h3>Rules</h3>
-          <ol>
-              <li>Place your ships on the grid shown to the left.</li>
-              <li>Try to attack your opponent's ships on the right.</li>
-              <li>Once you submit your ships' configuration, you cannot change it.</li>
-              <li>When all of your opponent's ships are sunk, you win!</li>
-          </ol>
-      </div> -->
-  </body>
+    <div id='tictactoe'>
+        <h2 align="center">Tic-Tac-Toe</h2>
+        <h3 align="center">Rules</h3>
+        <ol class="rules">
+            <li>X always moves first.</li>
+            <li>Players alternate starting first.</li>
+            <li>Whoever gets three of their symbol in a row first, wins!</li>
+            <li>If neither player gets three in a row, the game is a tie.</li>
+        </ol>
+        <h3 align="center">Game</h3>
+        <table align="center">
+            <tr>
+                <td>
+                    <button id="ttt0" onclick="move(0)" class="box"></button>
+                </td>
+                <td>
+                    <button id="ttt1" onclick="move(1)" class="box"></button>
+                </td>
+                <td>
+                    <button id="ttt2" onclick="move(2)" class="box"></button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button id="ttt3" onclick="move(3)" class="box"></button>
+                </td>
+                <td>
+                    <button id="ttt4" onclick="move(4)" class="box"></button>
+                </td>
+                <td>
+                    <button id="ttt5" onclick="move(5)" class="box"></button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button id="ttt6" onclick="move(6)" class="box"></button>
+                </td>
+                <td>
+                    <button id="ttt7" onclick="move(7)" class="box"></button>
+                </td>
+                <td>
+                    <button id="ttt8" onclick="move(8)" class="box"></button>
+                </td>
+            </tr>
+        </table>
+        <p align="center" id='tttToMove'>To Move: X</p>
+        <br>
+        <p align="center" id="tttWinner">Winner, Winner, chicken Dinner!</p>
+    </div>
+    <div class="centered">
+        <button align="center" id="newGame" onclick="newGame" class="button">New Game</button>
+    </div>
+    <!-- <div>
+        <h2>Battleship</h2>
+        <h3>Rules</h3>
+        <ol>
+            <li>Place your ships on the grid shown to the left.</li>
+            <li>Try to attack your opponent's ships on the right.</li>
+            <li>Once you submit your ships' configuration, you cannot change it.</li>
+            <li>When all of your opponent's ships are sunk, you win!</li>
+        </ol>
+    </div> -->
+</body>
 
 </html>
