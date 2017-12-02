@@ -1,6 +1,6 @@
 let numMoves = 0;
 const icons = ['X', 'O'];
-var grid = ['', '', '', '', '', '', '', '', '']
+var grid = ['', '', '', '', '', '', '', '', ''];
 const tests = [[0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 3, 6], [1, 4, 7], [2, 5, 8], [0, 4, 8], [2, 4, 6]];
 let toHighlight;
 
@@ -9,7 +9,7 @@ function toMove(numMoves) {
 }
 
 function isLine(a, b, c) {
-    return (grid[a] === grid[b] && grid[b] === grid[c] && grid[a] !== '')
+    return (grid[a] === grid[b] && grid[b] === grid[c] && grid[a] !== '');
 }
 
 function newGame() {
@@ -46,11 +46,11 @@ function move(btnid) {
         disableAllSquares();
         for (i = 0; i < tests.length; i++) {
             if (isLine(tests[i][0], tests[i][1], tests[i][2])) {
-                toHighlight.push(tests[i][0], tests[i][1], tests[i][2])
+                toHighlight.push(tests[i][0], tests[i][1], tests[i][2]);
             }
         }
         for (i = 0; i < toHighlight.length; i++) {
-            document.getElementById('ttt' + btnid).background-color = '00008B'
+            document.getElementById('ttt' + btnid).background-color = '00008B';
         }
     }
     else if (numMoves === 8) {
