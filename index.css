@@ -1,3 +1,6 @@
+body {
+	background-color: #E0FFFF;
+}
 h1 {
 	color: white;
 	text-transform: uppercase;
@@ -55,7 +58,7 @@ p {
 	border-radius: 30%;
 	padding: 0px;
 	margin: 3px 3px; 
-	color: #00FA9A;
+	color: white;
 	text-align: center;
 	display: inline-block;
 	font-size: 400%;
