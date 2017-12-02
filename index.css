@@ -6,14 +6,13 @@ h1 {
 	font-family: Helvetica;
 	font-weight: bold;
 }
-
 /* Center Table */
 table {
 	margin: auto;
 }
 
 /* Align Items Center Body */
-body, ol li {
+body {
 	text-align: center;
 	margin: auto;
 	font-family: Helvetica;
