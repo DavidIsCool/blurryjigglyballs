@@ -8,8 +8,7 @@ function toMove(numMoves) {
 }
 
 function testRow(a, b, c) {
-    return ((grid[a] === grid[b]) && (grid[b] === grid[c])
-    && grid[a] !== '') ? true : false;
+    return ((grid[a] === grid[b]) && (grid[b] === grid[c]) && grid[a] !== '')
 }
 
 function hasThreeInARow() {
@@ -31,7 +30,7 @@ function move(btnid) {
     document.getElementById('ttt' + btnid).disabled = true;
 
     if (hasThreeInARow()) {
-        document.getElementById('tttToMove').innerHTML = `The winner is ${toMove(numMoves).}`;
+        document.getElementById('tttToMove').innerHTML = `The winner is ${toMove(numMoves)}.`;
         disableAllSquares();
     }
     else if (numMoves === 8) {
