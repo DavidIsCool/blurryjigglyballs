@@ -44,6 +44,7 @@ function newGame() {
         let btn = document.getElementById('ttt' + i);
         btn.innerHTML = '';
         btn.disabled = false;
-        var grid = ['', '', '', '', '', '', '', '', ''];
+        grid = ['', '', '', '', '', '', '', '', ''];
+        numMoves = 0
     }
 }
