@@ -1,1 +1,57 @@
-Hello world!
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Game Interface</title>
+    <link href="index.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <script src="index.js"></script>
+    <h1>Games for SpartahacksII!</h1>
+    
+    <div id='tictactoe'>
+        <h2>Tic-Tac-Toe</h2>
+        <h3>Rules</h3>
+        <ol>
+            <li>X always moves first.</li>
+            <li>Players alternate starting first.</li>
+            <li>Whoever gets three of their symbol in a row first, wins!</li>
+            <li>If neither player gets three in a row, the game is a tie.</li>
+        </ol>
+        <h3>Game</h3>
+        <table>
+            <tr>
+                <td><input id='ttt1' type='button' value='  ' onclick='move(1)'></td>
+                <td><input id='ttt2' type='button' value='  ' onclick='move(2)'></td>
+                <td><input id='ttt3' type='button' value='  ' onclick='move(3)'></td>
+            </tr>
+            <tr>
+                <td><input id='ttt4' type='button' value='  ' onclick='move(4)'></td>
+                <td><input id='ttt5' type='button' value='  ' onclick='move(5)'></td>
+                <td><input id='ttt6' type='button' value='  ' onclick='move(6)'></td>
+            </tr>
+            <tr>
+                <td><input id='ttt7' type='button' value='  ' onclick='move(7)'></td>
+                <td><input id='ttt8' type='button' value='  ' onclick='move(8)'></td>
+                <td><input id='ttt9' type='button' value='  ' onclick='move(9)'></td>
+            </tr>
+        </table>
+        <br>
+        <p id='tttToMove'>To move: X</p>
+    </div>
+    
+    <div>
+        <h2>Battleship</h2>
+        <h3>Rules</h3>
+        <ol>
+            <li>Place your ships on the grid shown to the left.</li>
+            <li>Try to attack your opponent's ships on the right.</li>
+            <li>Once you submit your ships' configuration, you cannot change it.</li>
+            <li>When all of your opponent's ships are sunk, you win!</li>
+        </ol>
+        <h3>Game</h3>
+    </div>
+    
+  </body>
+</html>
