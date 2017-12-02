@@ -37,12 +37,14 @@ h1 {
 	text-family: Helvetica;
     border: none;
 	padding: 0;
-	margin: 2px;
+	margin-top: 5px;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    margin-left: 5px;
     color: white;
     text-align: center;
-    text-decoration: none;
     display: inline-block;
-    font-size: 10px;
+    font-size: 100%;
 	width: 30px;
 	height: 30px;
 }
