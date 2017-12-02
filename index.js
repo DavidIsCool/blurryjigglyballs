@@ -1,5 +1,4 @@
 var numMoves = 0;
-var winner;
 const icons = ['X', 'O'];
 // var grid = ['', '', '', '', '', '', '', '', '']
 
@@ -9,15 +8,18 @@ function toMove(numMoves) {
 
 function move(btnid) {
     grid[btnid] = toMove(numMoves);
-    let btn = document.getElementById('ttt' + btnid)
+    let btn = document.getElementById('ttt' + btnid);
     btn.value = toMove(numMoves);
-    btn.disabled = true
+    btn.disabled = true;
     numMoves++;
     document.getElementById('tttToMove').innerHTML = `To move: ${toMove(numMoves + 1)}`;
     if (gameOver()) {
-        document.getElementById('tttWinner').innerHTML = `The winner is ${toMove(numMoves)}!`
+        updateWinner(toMove(numMoves))
     }
 }
+
+function updateWinner(winner) {
+    document.getElementById('tttWinner').innerHTML = `The winner is ${winner}!`
 
 function testRow(a, b, c) {
     (grid[a] === grid[b] && grid[b] === grid[c]) ? return true:
