@@ -1,19 +1,30 @@
 // Variable Declaration
 var canvas = document.getElementById('canvas');
 var canvasFood = document.getElementById('canvasFood');
+var enemy = document.getElementById('enemy');
 var context = canvas.getContext('2d');
 var ctx = canvasFood.getContext('2d');
+var enemyCTX = enemy.getContext('2d');
 
+// player
 var x = canvas.width/2;
 var y = canvas.height/2;
 var r = 3;
 
+// food
 var ranx = Math.floor(Math.random() * 295);
 var rany = Math.floor(Math.random() * 147);
 
+// enemy
+var enemyX = Math.floor(Math.random() * 295);
+var enemyY = Math.floor(Math.random() * 147);
+
+// mouse
 var mouseX;
 var mouseY;
 
+var sizeTrack = 4;
+var score = 0;
 // animated frames
 var requestAnimationFrame = window.requestAnimationFrame || 
                             window.mozRequestAnimationFrame || 
@@ -52,6 +63,43 @@ function erase(c, ex, ey, rad){
     c.clearRect(0, 0, canvasFood.width, canvasFood.height);
 }
 
+//enemy logic
+function enemyK() {
+	enemyCTX.clearRect(0, 0, enemy.width, enemy.height);
+	enemyCTX.beginPath();
+	enemyCTX.arc(enemyX, enemyY, 10, 0, 2 * Math.PI, false);
+	enemyCTX.fillStyle = 'red';
+	enemyCTX.fill();
+	enemyCTX.closePath(); 
+	
+	// movement logic
+	if (enemyX > x) {
+		enemyX -= 1;
+	} else if (enemyX < x) {
+		enemyX += 1;
+	}
+
+	if (enemyY > y) {
+			enemyY -= 1;
+	} else if (enemyY < y) {
+		enemyY += 1;
+	}
+
+
+	if (enemyY < (y + 3) && enemyY > (y - 3) && enemyX < (x + 3) && enemyX > (x - 3)) {
+		y = y;
+		if (10 > r) {
+			alert("You dead!");
+
+		} else {
+			alert("You killed him!");
+		}
+	} 
+	
+	
+	requestAnimationFrame(enemyK);
+}
+
 // player logic
 function player() {
 	context.clearRect(0, 0, canvas.width, canvas.height);
@@ -61,18 +109,18 @@ function player() {
 	context.fill();
 	context.closePath(); 
 	document.getElementById("rip").innerHTML = "Coordinates: (" + x + "," + y + ")";
-	document.getElementById("food").innerHTML = "Coordinates: (" + ranx + "," + rany + ")";
+	document.getElementById("food").innerHTML = "Score: " + score;
 	// movement logic
 	if (x > mouseX) {
-		x -= 1;
+		x -= 1.7;
 	} else if (x < mouseX) {
-		x += 1;
+		x += 1.7;
 	}
 
 	if (y > mouseY) {
-			y -= 1;
+			y -= 1.7;
 	} else if (y < mouseY) {
-		y += 1;
+		y += 1.7;
 	}
 	
 	if (y < (mouseY + 10) && y > (mouseY - 10)) {
@@ -83,14 +131,14 @@ function player() {
 	}
 	
 	// check if food has been eaten
-	if (x < (ranx + 4) && x > (ranx - 4) && y > (rany - 4) && y < (mouseY + 4)) {
+	if (x < (ranx + sizeTrack) && x > (ranx - sizeTrack) && y > (rany - sizeTrack) && y < (mouseY + sizeTrack)) {
 		erase(ctx, ranx, rany, 1);
 		r += 0.8;
+		score += 1;
+		sizeTrack += 0.7;
 		ranx = Math.floor(Math.random() * 295);
 		rany = Math.floor(Math.random() * 147);
 		food();
-		
-		
 		
 	}
 	
@@ -98,6 +146,7 @@ function player() {
 }
 
 food();
+enemyK();
 player();
 
 
