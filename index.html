@@ -10,10 +10,10 @@
 
 <body>
     <script src="index.js"></script>
-    <h1 align="center"> Games for SpartaHacks II!</h1>
+    <h1 align="center" class="title"> Games for SpartaHacks II!</h1>
 
     <div id='tictactoe'>
-        <h2 align="center">Tic-Tac-Toe</h2>
+        <h2 align="center" class="gameTitle">Tic-Tac-Toe</h2>
         <h3 align="center">Rules</h3>
         <ol class="rules">
             <li>X always moves first.</li>
@@ -25,41 +25,41 @@
         <table align="center">
             <tr>
                 <td>
-                    <button id="ttt0" onclick="move(0)" class="box"></button>
+                    <button id="ttt0" onclick="move(0)" class="tictactoebox"></button>
                 </td>
                 <td>
-                    <button id="ttt1" onclick="move(1)" class="box"></button>
+                    <button id="ttt1" onclick="move(1)" class="tictactoebox"></button>
                 </td>
                 <td>
-                    <button id="ttt2" onclick="move(2)" class="box"></button>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <button id="ttt3" onclick="move(3)" class="box"></button>
-                </td>
-                <td>
-                    <button id="ttt4" onclick="move(4)" class="box"></button>
-                </td>
-                <td>
-                    <button id="ttt5" onclick="move(5)" class="box"></button>
+                    <button id="ttt2" onclick="move(2)" class="tictactoebox"></button>
                 </td>
             </tr>
             <tr>
                 <td>
-                    <button id="ttt6" onclick="move(6)" class="box"></button>
+                    <button id="ttt3" onclick="move(3)" class="tictactoebox"></button>
                 </td>
                 <td>
-                    <button id="ttt7" onclick="move(7)" class="box"></button>
+                    <button id="ttt4" onclick="move(4)" class="tictactoebox"></button>
                 </td>
                 <td>
-                    <button id="ttt8" onclick="move(8)" class="box"></button>
+                    <button id="ttt5" onclick="move(5)" class="tictactoebox"></button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button id="ttt6" onclick="move(6)" class="tictactoebox"></button>
+                </td>
+                <td>
+                    <button id="ttt7" onclick="move(7)" class="tictactoebox"></button>
+                </td>
+                <td>
+                    <button id="ttt8" onclick="move(8)" class="tictactoebox"></button>
                 </td>
             </tr>
         </table>
         <p align="center" id='tttToMove'>To Move: X</p>
         <br>
-        <p align="center" id="tttWinner">Winner, Winner, chicken Dinner!</p>
+        <p align="center" id="tttResult"></p>
     </div>
     <div class="centered">
         <button align="center" id="newGame" onclick="newGame" class="button">New Game</button>
