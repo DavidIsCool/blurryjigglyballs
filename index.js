@@ -45,7 +45,6 @@ function move(btnid) {
 function newGame() {
     numMoves = 0;
     grid = ['', '', '', '', '', '', '', '', ''];
-    document.getElementById('tttResult').innerHTML = '';
     document.getElementById('tttToMove').innerHTML = 'To Move: X';
     for (i = 0; i < 9; i++) {
         document.getElementById('ttt' + i).innerHTML = '';
