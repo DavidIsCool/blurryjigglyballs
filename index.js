@@ -26,39 +26,20 @@ function disableAllSquares() {
 
 function move(btnid) {
     grid[btnid] = toMove(numMoves);
-    let btn = document.getElementById('ttt' + btnid);
-    let resultElement = document.getElementById('tttResult');
-
-    btn.innerHTML = toMove(numMoves);
-    btn.disabled = true;
+    document.getElementById('ttt' + btnid).innerHTML = toMove(numMoves);
+    document.getElementById('ttt' + btnid).disabled = true;
 
     if (hasThreeInARow()) {
-        resultElement.innerHTML = `The winner is ${toMove(numMoves)}`;
+        document.getElementById('tttResult').innerHTML = `The winner is ${toMove(numMoves)}`;
         disableAllSquares()
     }
     else if (numMoves === 9) {
-        resultElement.innerHTML = 'The game is a tie!'
+        document.getElementById('tttResult').innerHTML = 'The game is a tie!'
     }
     else {
         numMoves++;
         document.getElementById('tttToMove').innerHTML = `To Move: ${toMove(numMoves)}`;
     }
-
-
-
-    /*
-    if ((hasThreeInARow() || noMoves === 9)) {
-        for (i = 0; i < 9; i++) {
-            document.getElementById('ttt' + i).disabled = true;
-        }
-        document.getElementById('tttToMove').innerHTML = '';
-        if (threeInARow) {
-            updateResult(toMove(numMoves - 1));
-        }
-        else {
-            document.getElementById('tttWinner').innerHTML = "It's a tie!"
-        }
-    } */
 }
 
 function newGame() {
