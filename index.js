@@ -19,10 +19,10 @@ function move(btnid) {
         }
         document.getElementById('tttToMove').innerHTML = '';
         if (threeInARow) {
-            document.getElementById('tttWinner').innerHTML = "It's a tie!"
+            updateWinner(toMove(numMoves - 1));
         }
         else {
-            updateWinner(toMove(numMoves - 1));
+            document.getElementById('tttWinner').innerHTML = "It's a tie!"
         }
     }
 }
