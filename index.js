@@ -13,8 +13,9 @@ function move(btnid) {
     btn.value = toMove(numMoves);
     btn.disabled = true;
     */
-    document.getElementById('ttt' + btnid).value = toMove(numMoves);
-    document.getElementById('ttt' + btnid).disabled = true;
+    let btn = document.getElementById('ttt' + btnid);
+    btn.innerHTML = toMove(numMoves);
+    btn.disabled = true;
     numMoves++;
     document.getElementById('tttToMove').innerHTML = `To move: ${toMove(numMoves + 1)}`;
     if (gameOver()) {
@@ -38,9 +39,8 @@ function gameOver() {
 function newGame() {
     for (i = 0; i < 9; i++) {
         let btn = document.getElementById('ttt' + i);
-        btn.value = '  ';
+        btn.innerHTML = null;
         btn.disabled = false;
         var grid = ['', '', '', '', '', '', '', '', ''];
     }
-    
 }
