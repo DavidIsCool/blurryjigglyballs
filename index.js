@@ -37,7 +37,9 @@ function testRow(a, b, c) {
 
 function gameOver() {
     // If game over, then return true; otherwise, return false
-    var threeInARow = (testRow(0, 1, 2) || testRow(3, 4, 5) || testRow(6, 7, 8) || testRow(0, 3, 6) || testRow(1, 4, 7) || testRow(2, 5, 8) || testRow(0, 4, 8) || testRow(2, 4, 6));
+    var threeInARow = (testRow(0, 1, 2) || testRow(3, 4, 5) ||
+    testRow(6, 7, 8) || testRow(0, 3, 6) || testRow(1, 4, 7) ||
+    testRow(2, 5, 8) || testRow(0, 4, 8) || testRow(2, 4, 6));
     return (threeInARow || (noMoves === 9)) ? true : false;
 }
 
