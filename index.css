@@ -1,18 +1,22 @@
-/* Change Heading Color */
-h1 {
+.title {
 	color: white;
 	text-transform: uppercase;
 	background-color: CornflowerBlue;
 	font-family: Helvetica;
 	font-weight: bold;
+	font-size: 30px;
 }
-.rules {
+.gameTitle {
+	font-family: Helvetica;
+	color: #00BFFF;
+	text-transform: uppercase;
+	background-color: #483D8B;
+	font-weight: bold;
+}
+.gameRules {
 	font-family: Arial;
 	text-align: center;
 	list-style-position: inside;
-}
-.centered {
-	text-align: center;
 }
 .button {
     background-color: #4CAF50;
@@ -32,7 +36,10 @@ h1 {
     background-color: #001f3f;
     color: #2ECC40;
 }
-.box {
+.centered {
+	text-align: center;
+}
+.tictactoebox {
 	background-color: #4CAF50;
 	text-family: Helvetica;
     border: none;
@@ -44,7 +51,8 @@ h1 {
     color: white;
     text-align: center;
     display: inline-block;
-    font-size: 100%;
-	width: 30px;
-	height: 30px;
+    font-size: 200%;
+	width: 60px;
+	height: 60px;
 }
+
