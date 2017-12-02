@@ -19,6 +19,9 @@ function move(btnid) {
     numMoves++;
     document.getElementById('tttToMove').innerHTML = `To Move: ${toMove(numMoves)}`;
     if (gameOver()) {
+        if (threeInARow) {
+            document.getElementById('tttWinner').innerHTML = "It's a tie!"
+        }
         updateWinner(toMove(numMoves - 1));
         for (i = 0; i < 9; i++) {
             document.getElementById('ttt' + i).disabled = true;
@@ -36,13 +39,14 @@ function testRow(a, b, c) {
 
 function gameOver() {
     // If game over, then return true; otherwise, return false
-    return (testRow(0, 1, 2) || testRow(3, 4, 5) || testRow(6, 7, 8) || testRow(0, 3, 6) || testRow(1, 4, 7) || testRow(2, 5, 8) || testRow(0, 4, 8) || testRow(2, 4, 6)) ? true : false;
+    var threeInARow = (testRow(0, 1, 2) || testRow(3, 4, 5) || testRow(6, 7, 8) || testRow(0, 3, 6) || testRow(1, 4, 7) || testRow(2, 5, 8) || testRow(0, 4, 8) || testRow(2, 4, 6));
+    return (threeInARow || noMoves === 9) ? true : false;
 }
 
 function newGame() {
     numMoves = 0;
     grid = ['', '', '', '', '', '', '', '', ''];
-    document.getElementById('tttWinner').innerHTML = ''
+    document.getElementById('tttWinner').innerHTML = '';
     document.getElementById('tttToMove').innerHTML = 'To Move: X';
     for (i = 0; i < 9; i++) {
         let btn = document.getElementById('ttt' + i);
