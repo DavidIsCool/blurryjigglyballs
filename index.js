@@ -1,6 +1,4 @@
-$(document).ready(function(){
-
-   $("ttt1").onClick 
-
-});
+function move(move) {
+		document.getElementById("ttt1").value = "x"
+}
 
