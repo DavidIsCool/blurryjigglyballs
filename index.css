@@ -6,14 +6,8 @@ h1 {
 	font-family: Helvetica;
 	font-weight: bold;
 }
-/* Center Table */
-table {
-	margin: auto;
-}
-
-/* Align Items Center Body */
-body {
+.center {
+	font-family: Arial;
 	text-align: center;
-	margin: auto;
-	font-family: Helvetica;
+	list-style-position: inside;
 }
