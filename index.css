@@ -4,7 +4,7 @@ h1 {
 	background-color: CornflowerBlue;
 	font-family: Helvetica;
 	font-weight: bold;
-	font-size: 30px;
+	font-size: 65px;
 	text-align: center;
 }
 h2 {
@@ -31,14 +31,11 @@ p {
 }
 .button {
     background-color: #4CAF50;
-    border: none;
     color: white;
-    padding: 15px 32px;
+    padding: 15px 15px;
     text-align: center;
-    text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    margin: auto;
     cursor: pointer;
     -webkit-transition-duration: 0.4s; 
     transition-duration: 0.4s;
@@ -65,5 +62,8 @@ p {
     font-size: 200%;
 	width: 60px;
 	height: 60px;
+}
+.byline {
+	float: left;
 }
 
