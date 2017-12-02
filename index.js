@@ -17,7 +17,7 @@ function move(btnid) {
     btn.innerHTML = toMove(numMoves);
     btn.disabled = true;
     numMoves++;
-    document.getElementById('tttToMove').innerHTML = `To move: ${toMove(numMoves + 1)}`;
+    document.getElementById('tttToMove').innerHTML = `To Move: ${toMove(numMoves + 1)}`;
     if (gameOver()) {
         updateWinner(toMove(numMoves - 1));
     }
@@ -39,7 +39,7 @@ function gameOver() {
 function newGame() {
     for (i = 0; i < 9; i++) {
         let btn = document.getElementById('ttt' + i);
-        btn.innerHTML = null;
+        btn.innerHTML = '';
         btn.disabled = false;
         var grid = ['', '', '', '', '', '', '', '', ''];
     }
