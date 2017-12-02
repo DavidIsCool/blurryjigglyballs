@@ -90,10 +90,9 @@ function enemyK() {
 		y = y;
 		if (10 > r) {
 			alert("You dead!");
+			document.location.reload();
 
-		} else {
-			alert("You killed him!");
-		}
+		} 
 	} 
 	
 	
@@ -135,11 +134,15 @@ function player() {
 		erase(ctx, ranx, rany, 1);
 		r += 0.8;
 		score += 1;
-		sizeTrack += 0.7;
+		sizeTrack += 0.79;
 		ranx = Math.floor(Math.random() * 295);
 		rany = Math.floor(Math.random() * 147);
 		food();
-		
+	}
+	
+	if (y < (enemyY + sizeTrack) && y > (enemyY - sizeTrack) && x < (enemyX + sizeTrack) && x > (x - sizeTrack)) {
+		alert("you killed him!");
+		document.location.reload();
 	}
 	
 	requestAnimationFrame(player);
