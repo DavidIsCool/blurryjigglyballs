@@ -8,9 +8,9 @@
 }
 .gameTitle {
 	font-family: Helvetica;
-	color: #FF1943;
+	color: #00BFFF;
 	text-transform: uppercase;
-	background-color: #00BFFF;
+	background-color: #483D8B;
 	font-weight: bold;
 }
 .gameRules {
