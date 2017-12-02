@@ -17,7 +17,7 @@ function move(btnid) {
     btn.innerHTML = toMove(numMoves);
     btn.disabled = true;
     numMoves++;
-    document.getElementById('tttToMove').innerHTML = `To Move: ${toMove(numMoves + 1)}`;
+    document.getElementById('tttToMove').innerHTML = `To Move: ${toMove(numMoves)}`;
     if (gameOver()) {
         updateWinner(toMove(numMoves - 1));
     }
