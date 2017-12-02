@@ -1,22 +1,33 @@
-.title {
+h1 {
 	color: white;
 	text-transform: uppercase;
 	background-color: CornflowerBlue;
 	font-family: Helvetica;
 	font-weight: bold;
 	font-size: 30px;
+	text-align: center;
 }
-.gameTitle {
+h2 {
 	font-family: Helvetica;
 	color: #00BFFF;
-	text-transform: uppercase;
 	background-color: #483D8B;
 	font-weight: bold;
+	text-align: center;
 }
-.gameRules {
+h3 {
 	font-family: Arial;
 	text-align: center;
+	text-transform: uppercase;
+	text-decoration: underline;
+}
+ol li {
+	font-family: Arial;
 	list-style-position: inside;
+	text-align: center;
+}
+p {
+	font-family: Arial;
+	text-align: center;
 }
 .button {
     background-color: #4CAF50;
