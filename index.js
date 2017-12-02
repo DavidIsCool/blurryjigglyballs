@@ -31,10 +31,10 @@ function move(btnid) {
 
     if (hasThreeInARow()) {
         document.getElementById('tttResult').innerHTML = `The winner is ${toMove(numMoves)}`;
-        disableAllSquares()
+        disableAllSquares();
     }
-    else if (numMoves === 9) {
-        document.getElementById('tttResult').innerHTML = 'The game is a tie!'
+    else if (numMoves === 8) {
+        document.getElementById('tttResult').innerHTML = 'The game is a tie!';
     }
     else {
         numMoves++;
