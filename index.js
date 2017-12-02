@@ -48,8 +48,7 @@ function newGame() {
     document.getElementById('tttResult').innerHTML = '';
     document.getElementById('tttToMove').innerHTML = 'To Move: X';
     for (i = 0; i < 9; i++) {
-        let btn = document.getElementById('ttt' + i);
-        btn.innerHTML = '';
-        btn.disabled = false;
+        document.getElementById('ttt' + i).innerHTML = ''
+        document.getElementById('ttt' + i).disabled = false;
     }
 }
