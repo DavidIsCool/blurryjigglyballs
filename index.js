@@ -8,6 +8,6 @@ function toMove(numMoves) {
 
 function move(btnid) {
     document.getElementById('ttt' + btnid).value = toMove(numMoves)
-    document.getElementById('tttToMove').innerHTML = `To move: ${toMove(numMoves)}
+    document.getElementById('tttToMove').innerHTML = `To move: ${toMove(numMoves)}`
     numMoves++
 }
