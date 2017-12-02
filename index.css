@@ -1,6 +1,10 @@
 /* Change Heading Color */
 h1 {
-	color: blue;
+	color: white;
+	text-transform: uppercase;
+	background-color: CornflowerBlue;
+	font-family: Helvetica;
+	font-weight: bold;
 }
 
 /* Center Table */
@@ -9,7 +13,8 @@ table {
 }
 
 /* Align Items Center Body */
-body {
+body, ol li {
 	text-align: center;
 	margin: auto;
+	font-family: Helvetica;
 }
