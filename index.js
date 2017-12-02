@@ -25,18 +25,17 @@ function disableAllSquares() {
 }
 
 function move(btnid) {
+    // Note: the 'tttToMove' field gets replaced when the game is a result by the result.
     grid[btnid] = toMove(numMoves);
     document.getElementById('ttt' + btnid).innerHTML = toMove(numMoves);
     document.getElementById('ttt' + btnid).disabled = true;
 
     if (hasThreeInARow()) {
-        document.getElementById('tttResult').innerHTML = `The winner is ${toMove(numMoves).}`;
-        document.getElementById('tttToMove').innerHTML = '';
+        document.getElementById('tttToMove').innerHTML = `The winner is ${toMove(numMoves).}`;
         disableAllSquares();
     }
     else if (numMoves === 8) {
-        document.getElementById('tttResult').innerHTML = 'The game is a tie!';
-        document.getElementById('tttToMove').innerHTML = '';
+        document.getElementById('tttToMove').innerHTML = 'The game is a tie!';
     }
     else {
         numMoves++;
