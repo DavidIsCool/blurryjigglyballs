@@ -40,11 +40,16 @@ function gameOver() {
 }
 
 function newGame() {
+    numMoves = 0;
+    grid = ['', '', '', '', '', '', '', '', ''];
+    document.getElementById('tttWinner').innerHTML = ''
+    document.getElementById('tttToMove').innerHTML = 'To Move: X';
     for (i = 0; i < 9; i++) {
         let btn = document.getElementById('ttt' + i);
         btn.innerHTML = '';
         btn.disabled = false;
-        grid = ['', '', '', '', '', '', '', '', ''];
-        numMoves = 0
+
+
+
     }
 }
