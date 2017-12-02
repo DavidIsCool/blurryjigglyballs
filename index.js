@@ -20,6 +20,9 @@ function move(btnid) {
     document.getElementById('tttToMove').innerHTML = `To Move: ${toMove(numMoves)}`;
     if (gameOver()) {
         updateWinner(toMove(numMoves - 1));
+        for (i = 0; i < 9; i++) {
+            document.getElementById('ttt' + i).disabled = true;
+        }
     }
 }
 
