@@ -8,6 +8,10 @@ function toMove(numMoves) {
     return icons[numMoves % 2];
 }
 
+function testLine(a, b, c) {
+    return (grid[a] === grid[b] && grid[b] === grid[c] && grid[a] !== '')
+}
+
 function newGame() {
     numMoves = 0;
     grid = ['', '', '', '', '', '', '', '', ''];
@@ -16,10 +20,6 @@ function newGame() {
         document.getElementById('ttt' + i).innerHTML = '';
         document.getElementById('ttt' + i).disabled = false;
     }
-}
-
-function testLine(a, b, c) {
-    return (grid[a] === grid[b] && grid[b] === grid[c] && grid[a] !== '')
 }
 
 function hasThreeInARow() {
@@ -39,7 +39,7 @@ function disableAllSquares() {
 }
 
 function move(btnid) {
-    grid[btnid] = toMove(numMoves)
+    grid[btnid] = toMove(numMoves);
     document.getElementById('ttt' + btnid).innerHTML = toMove(numMoves);
     document.getElementById('ttt' + btnid).disabled = true;
 
@@ -53,4 +53,5 @@ function move(btnid) {
     else {
         numMoves++;
         document.getElementById('tttToMove').innerHTML = `To Move: ${toMove(numMoves)}`;
+    }
 }
