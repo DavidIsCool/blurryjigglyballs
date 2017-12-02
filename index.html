@@ -23,25 +23,25 @@
 			<h3 align="center">Game</h3>
         <table align="center">
             <tr>
-                <td><input id='ttt0' type='button' value='  ' onclick='move(0)'></td>
-                <td><input id='ttt1' type='button' value='  ' onclick='move(1)'></td>
-                <td><input id='ttt2' type='button' value='  ' onclick='move(2)'></td>
+				<td><button id="ttt0" onclick="move(0)" class="box"></button></td>
+				<td><button id="ttt1" onclick="move(1)" class="box"></button></td>
+				<td><button id="ttt2" onclick="move(2)" class="box"></button></td>
             </tr>
             <tr>
-                <td><input id='ttt3' type='button' value='  ' onclick='move(3)'></td>
-                <td><input id='ttt4' type='button' value='  ' onclick='move(4)'></td>
-                <td><input id='ttt5' type='button' value='  ' onclick='move(5)'></td>
+                <td><button id="ttt3" onclick="move(3)" class="box"></button></td>
+				<td><button id="ttt4" onclick="move(4)" class="box"></button></td>
+				<td><button id="ttt5" onclick="move(5)" class="box"></button></td>
             </tr>
             <tr>
-                <td><input id='ttt6' type='button' value='  ' onclick='move(6)'></td>
-                <td><input id='ttt7' type='button' value='  ' onclick='move(7)'></td>
-                <td><input id='ttt8' type='button' value='  ' onclick='move(8)'></td>
+                <td><button id="ttt6" onclick="move(6)" class="box"></button></td>
+				<td><button id="ttt7" onclick="move(7)" class="box"></button></td>
+				<td><button id="ttt8" onclick="move(8)" class="box"></button></td>
             </tr>
         </table>
         <p align="center" id='tttToMove'>To Move: X</p>
     </div>
 	<div class="centered">
-		<button id="newGame" onclick="newGame()" class="button">New Game</button>
+		<button align="center" id="newGame" onclick="newGame" class="button">New Game</button>
 	</div>
     <!-- <div>
         <h2>Battleship</h2>
