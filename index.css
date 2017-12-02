@@ -6,8 +6,43 @@ h1 {
 	font-family: Helvetica;
 	font-weight: bold;
 }
-.center {
+.rules {
 	font-family: Arial;
 	text-align: center;
 	list-style-position: inside;
+}
+.centered {
+	text-align: center;
+}
+.button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: auto;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s; 
+    transition-duration: 0.4s;
+}
+.button:hover {
+    background-color: #001f3f;
+    color: #2ECC40;
+}
+.box {
+	background-color: #4CAF50;
+	text-family: Helvetica;
+    border: none;
+	padding: 0;
+	margin: 2px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 10px;
+	width: 30px;
+	height: 30px;
 }
