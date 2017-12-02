@@ -24,18 +24,17 @@ function move(btnid) {
 
 function updateWinner(winner) {
     document.getElementById('tttWinner').innerHTML = `The winner is ${winner}!`;
+}
 
 function testRow(a, b, c) {
-    (grid[a] === grid[b] && grid[b] === grid[c]) ? return true:
-    return false;
+    (grid[a] === grid[b] && grid[b] === grid[c]) ? true: false;
 }
 
 function gameOver() {
     // If game over, then return true; otherwise, return false
-    (testRow(0, 1, 2) || testRow(3, 4, 5) || testRow(6, 7, 8) || \
-     testRow(0, 3, 6) || testRow(1, 4, 7) || testRow(2, 5, 8) || \
-     testRow(0, 4, 8) || testRow(2, 4, 6)) ? return true:
-    return false;
+    (testRow(0, 1, 2) || testRow(3, 4, 5) || testRow(6, 7, 8) || 
+     testRow(0, 3, 6) || testRow(1, 4, 7) || testRow(2, 5, 8) || 
+     testRow(0, 4, 8) || testRow(2, 4, 6)) ? true: false;
 }
 
 function newGame() {
