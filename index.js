@@ -18,7 +18,7 @@ function move(btnid) {
     numMoves++;
     document.getElementById('tttToMove').innerHTML = `To move: ${toMove(numMoves + 1)}`;
     if (gameOver()) {
-        updateWinner(toMove(numMoves));
+        updateWinner(toMove(numMoves - 1));
     }
 }
 
