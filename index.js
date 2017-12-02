@@ -1,4 +1,4 @@
-function move(move) {
-		document.getElementById("ttt1").value = "x"
+function move(btnid) {
+    document.getElementById("ttt" + btnid).value = "x"
 }
 
