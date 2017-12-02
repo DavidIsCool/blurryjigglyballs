@@ -90,7 +90,7 @@ function enemyK() {
 		y = y;
 		if (10 > r) {
 			alert("You dead!");
-			document.location.reload(false);
+			location.reload();
 
 		} 
 	} 
@@ -142,7 +142,7 @@ function player() {
 	
 	if (y < (enemyY + sizeTrack) && y > (enemyY - sizeTrack) && x < (enemyX + sizeTrack) && x > (x - sizeTrack)) {
 		alert("you killed him!");
-		document.location.reload(false);
+		location.reload();
 	}
 	
 	requestAnimationFrame(player);
