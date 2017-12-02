@@ -1,3 +1,15 @@
+/* Change Heading Color */
 h1 {
 	color: blue;
+}
+
+/* Center Table */
+table {
+	margin: auto;
+}
+
+/* Align Items Center Body */
+body {
+	text-align: center;
+	margin: auto;
 }
