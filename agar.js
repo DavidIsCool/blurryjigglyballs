@@ -93,6 +93,7 @@ function enemyK() {
 			location.reload();
 
 		} 
+		
 	} 
 	
 	
@@ -140,7 +141,7 @@ function player() {
 		food();
 	}
 	
-	if (y < (enemyY + sizeTrack) && y > (enemyY - sizeTrack) && x < (enemyX + sizeTrack) && x > (x - sizeTrack)) {
+	if (y < (enemyY + sizeTrack) && y > (enemyY - sizeTrack) && x < (enemyX + sizeTrack) && x > (x - sizeTrack) && r > 10) {
 		alert("you killed him!");
 		location.reload();
 	}
