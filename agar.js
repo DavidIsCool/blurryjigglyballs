@@ -5,8 +5,7 @@ var enemy = document.getElementById('enemy');
 var context = canvas.getContext('2d');
 var ctx = canvasFood.getContext('2d');
 var enemyCTX = enemy.getContext('2d');
-var wins = 0;
-var losses = 0;
+
 
 // player
 var x = canvas.width/2;
@@ -91,13 +90,11 @@ function enemyK() {
 	if (enemyY < (y + sizeTrack) && enemyY > (y - sizeTrack) && enemyX < (x + sizeTrack) && enemyX > (x - sizeTrack)) {
 		y = y;
 		if (10 > r) {
-			losses += 1
-			document.getElementById("lose").innerHTML = `Losses: ${losses}`;
+			
 			window.location.reload();
 		
 		} else if (r >= 10){
-			wins += 1
-			document.getElementById("win").innerHTML = `Wins: ${wins}`;
+			
 			window.location.reload();
 			
 			
