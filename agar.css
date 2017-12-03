@@ -17,5 +17,5 @@ canvas {
 }
 
 #win, #lose {
-	float: right;
+	text-align: right;
 }
