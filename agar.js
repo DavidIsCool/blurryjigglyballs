@@ -92,12 +92,12 @@ function enemyK() {
 		y = y;
 		if (10 > r) {
 			losses += 1
-			document.getElementById("lose").innerHTML = "Losses: " + losses;
+			document.getElementById("lose").innerHTML = `Losses: ${losses}`;
 			window.location.reload();
 		
 		} else if (r >= 10){
 			wins += 1
-			document.getElementById("win").innerHTML = "Wins: " + wins;
+			document.getElementById("win").innerHTML = `Wins: ${wins}`;
 			window.location.reload();
 			
 			
