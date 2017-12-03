@@ -86,12 +86,12 @@ function enemyK() {
 	}
 
 
-	if (enemyY < (y + 3) && enemyY > (y - 3) && enemyX < (x + 3) && enemyX > (x - 3)) {
+	if (enemyY < (y + sizeTrack) && enemyY > (y - sizeTrack) && enemyX < (x + sizeTrack) && enemyX > (x - sizeTrack)) {
 		y = y;
 		if (10 > r) {
 			alert("You dead!");
 			location.reload();
-		} else {
+		} else if (r >= 10){
 			alert("you killed him!");
 			location.reload();
 		}
