@@ -89,11 +89,13 @@ function enemyK() {
 	if (enemyY < (y + sizeTrack) && enemyY > (y - sizeTrack) && enemyX < (x + sizeTrack) && enemyX > (x - sizeTrack)) {
 		y = y;
 		if (10 > r) {
+			window.location.reload();
 			alert("You dead!");
-			window.location.reload();
+			
 		} else if (r >= 10){
-			alert("you killed him!");
 			window.location.reload();
+			alert("you killed him!");
+			
 		}
 	} 
 	
