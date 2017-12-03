@@ -132,7 +132,7 @@ function player() {
 	}
 	
 	// check if food has been eaten
-	if (x < (ranx + sizeTrack) && x > (ranx - sizeTrack) && y > (rany - sizeTrack) && y < (mouseY + sizeTrack)) {
+	if (x < (ranx + sizeTrack) && x > (ranx - sizeTrack) && y > (rany - sizeTrack) && y < (rany + sizeTrack)) {
 		erase(ctx, ranx, rany, 1);
 		r += 0.8;
 		score += 1;
