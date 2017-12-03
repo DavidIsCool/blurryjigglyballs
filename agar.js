@@ -91,9 +91,10 @@ function enemyK() {
 		if (10 > r) {
 			alert("You dead!");
 			location.reload();
-
-		} 
-		
+		} else {
+			alert("you killed him!");
+			location.reload();
+		}
 	} 
 	
 	
@@ -139,11 +140,6 @@ function player() {
 		ranx = Math.floor(Math.random() * 295);
 		rany = Math.floor(Math.random() * 147);
 		food();
-	}
-	
-	if (y < (enemyY + sizeTrack) && y > (enemyY - sizeTrack) && x < (enemyX + sizeTrack) && x > (x - sizeTrack) && r > 10) {
-		alert("you killed him!");
-		location.reload();
 	}
 	
 	requestAnimationFrame(player);
