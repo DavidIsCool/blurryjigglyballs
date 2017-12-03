@@ -2,7 +2,7 @@ let numMoves = 0;
 const icons = ['X', 'O'];
 var grid = ['', '', '', '', '', '', '', '', ''];
 const tests = [[0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 3, 6], [1, 4, 7], [2, 5, 8], [0, 4, 8], [2, 4, 6]];
-let toHighlight;
+let toHighlight = [];
 
 function toMove(numMoves) {
     return icons[numMoves % 2];
@@ -20,6 +20,7 @@ function newGame() {
     for (i = 0; i < 9; i++) {
         document.getElementById('ttt' + i).innerHTML = '';
         document.getElementById('ttt' + i).disabled = false;
+        document.getElementById('ttt' + i).style.backgroundColor = '#00008B'
     }
 }
 
@@ -50,7 +51,7 @@ function move(btnid) {
             }
         }
         for (i = 0; i < toHighlight.length; i++) {
-            document.getElementById('ttt' + btnid).background-color = '00008B';
+            document.getElementById('ttt' + toHighlight[i]).style.backgroundColor = 'GREEN';
         }
     }
     else if (numMoves === 8) {

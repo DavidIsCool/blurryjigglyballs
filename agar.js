@@ -86,13 +86,14 @@ function enemyK() {
 	}
 
 
-	if (enemyY < (y + 3) && enemyY > (y - 3) && enemyX < (x + 3) && enemyX > (x - 3)) {
+	if (enemyY < (y + sizeTrack) && enemyY > (y - sizeTrack) && enemyX < (x + sizeTrack) && enemyX > (x - sizeTrack)) {
 		y = y;
 		if (10 > r) {
 			alert("You dead!");
-
-		} else {
-			alert("You killed him!");
+			window.location.reload();
+		} else if (r >= 10){
+			alert("you killed him!");
+			window.location.reload();
 		}
 	} 
 	
@@ -131,15 +132,14 @@ function player() {
 	}
 	
 	// check if food has been eaten
-	if (x < (ranx + sizeTrack) && x > (ranx - sizeTrack) && y > (rany - sizeTrack) && y < (mouseY + sizeTrack)) {
+	if (x < (ranx + sizeTrack) && x > (ranx - sizeTrack) && y > (rany - sizeTrack) && y < (rany + sizeTrack)) {
 		erase(ctx, ranx, rany, 1);
 		r += 0.8;
 		score += 1;
-		sizeTrack += 0.7;
+		sizeTrack += 0.79;
 		ranx = Math.floor(Math.random() * 295);
 		rany = Math.floor(Math.random() * 147);
 		food();
-		
 	}
 	
 	requestAnimationFrame(player);
