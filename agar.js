@@ -90,12 +90,10 @@ function enemyK() {
 		y = y;
 		if (10 > r) {
 			alert("You dead!");
-			x = 0;
-			y = 0;
-			location.reload();
+			window.location.reload();
 		} else if (r >= 10){
 			alert("you killed him!");
-			location.reload();
+			window.location.reload();
 		}
 	} 
 	
